@@ -1,7 +1,5 @@
-import "./globals.css";
-
 export const metadata = {
-  title: "Crud Fiap",
+  title: "Autenticação",
   description: "Projeto de cadastro e login",
 };
 
