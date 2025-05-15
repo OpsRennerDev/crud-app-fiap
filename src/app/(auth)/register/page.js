@@ -1,6 +1,7 @@
 'use client'
 import { useState } from "react"
 import { useRouter } from "next/navigation"
+import Button from "@/app/_components/Button"
 
 export default function Register(){
     const [name, setName] = useState("")
@@ -23,7 +24,7 @@ export default function Register(){
             <div className="card w-full max-w-md shadow-xl bg-base-100">
                 <div className="card-body">
                     <h2 className="card-title justify-center text-2xl">Cadastro</h2>
-                    <form onSubmit={handleRegister} className="form-control gap-4 mt-4">
+                    <form onSubmit={handleRegister} className="form-control space-y-4 mt-4">
                         <input 
                             type="text" 
                             placeholder="Nome" 
@@ -45,7 +46,9 @@ export default function Register(){
                             value={password}
                             onChange={e => setPassword(e.target.value)}  
                         />
-                        <button type="submit" className="btn btn-success mt-2">Cadastrar</button>
+                        <div className="text-right">
+                            <Button title="Cadastrar" />
+                        </div>
                     </form>
                 </div>
             </div>

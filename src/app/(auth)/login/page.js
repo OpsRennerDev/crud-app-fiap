@@ -1,6 +1,7 @@
 'use client'
 import { useState } from "react"
 import { useRouter } from "next/navigation"
+import Button from "@/app/_components/Button"
 
 export default function Login() {
     const [email, setEmail] = useState("")
@@ -25,7 +26,7 @@ export default function Login() {
             <div className="card w-full max-w-md shadow-xl bg-base-100">
                 <div className="card-body">
                     <h2 className="card-title justify-center text-2xl">Login</h2>
-                    <form onSubmit={handleLogin} className="form-control gap-4 mt-4">
+                    <form onSubmit={handleLogin} className="form-control space-y-4 mt-4">
                         <input 
                             type="email" 
                             placeholder="Email" 
@@ -40,7 +41,9 @@ export default function Login() {
                             value={password}
                             onChange={e => setPassword(e.target.value)}  
                         />
-                        <button type="submit" className="btn btn-primary mt-2">Entrar</button>
+                        <div className="text-right">
+                            <Button title="Entrar" />
+                        </div>
                     </form>
                 </div>
             </div>
